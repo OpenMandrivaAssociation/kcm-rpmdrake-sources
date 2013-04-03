@@ -7,7 +7,7 @@ License:        GPLv3+
 Group:          Graphical desktop/KDE
 Summary:        A KDE Control Module for launching repository configuration GUI
 Version:        1.0
-Release:        9
+Release:        10
 BuildArch:      noarch
 Source0:        %{name}-%{version}.tar.gz
 
@@ -22,6 +22,9 @@ Repository configuration GUI GUI launcher for KDE Control Center
 
 %install
 %makeinstall_std -C build
+
+#fix run programm
+sed -e 's/edit-urpm-sources.pl/drakrpm-edit-media/' -i %{buildroot}%{_datadir}/kde4/services/kcm_rpmdrake-sources.desktop
 
 %files
 %defattr(-,root,root)
