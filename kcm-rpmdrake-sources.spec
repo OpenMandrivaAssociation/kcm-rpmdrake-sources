@@ -7,7 +7,7 @@ License:        GPLv3+
 Group:          Graphical desktop/KDE
 Summary:        A KDE Control Module for launching repository configuration GUI
 Version:        1.0
-Release:        11
+Release:        12
 BuildArch:      noarch
 Source0:        %{name}-%{version}.tar.gz
 
